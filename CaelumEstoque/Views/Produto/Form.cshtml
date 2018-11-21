@@ -28,6 +28,7 @@
 
             <label for="descricao">Descrição:</label>
             <input id="descricao" name="produto.Descricao" value="@ViewBag.Produto.Descricao" />
+            @Html.ValidationMessage("produto.Descricao")
 
             <label for="categoria">Categoria:</label>
             <select id="categoria" name="produto.CategoriaId">
