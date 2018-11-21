@@ -60,7 +60,6 @@ namespace CaelumEstoque.Controllers
         {
             ProdutosDAO dao = new ProdutosDAO();
             Produto produto = dao.BuscaPorId(id);
-            ViewBag.Produto = produto;
 
             return View(produto);
         }
