@@ -19,7 +19,8 @@
         Descrição: @ViewBag.Produto.Descricao<br />
         Quantidade: @ViewBag.Produto.Quantidade<br />
 
-        @Html.ActionLink("Voltar para a lista de produtos", "Index", "Produto")
+        @* @Html.ActionLink("Voltar para a lista de produtos", "Index", "Produto") *@
+        @Html.RouteLink("Voltar para a lista", "ListaProdutos")
     </div>
 </body>
 </html>
