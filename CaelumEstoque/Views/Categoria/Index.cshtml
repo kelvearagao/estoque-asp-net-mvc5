@@ -1,36 +1,20 @@
 ﻿
-@{
-    Layout = null;
-}
-
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-</head>
-<body>
-    <div>
-        <table>
-            <thead>
-                <tr>
-                    <th>Id</th>
-                    <th>Nome</th>
-                    <th>Descrição</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var c in ViewBag.Categorias)
-                {
-                    <tr>
-                        <td>@c.Id</td>
-                        <td>@c.Nome</td>
-                        <td>@c.Descricao</td>
-                    </tr>
-                }
-            </tbody>
-        </table>
-    </div>
-</body>
-</html>
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nome</th>
+            <th>Descrição</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var c in ViewBag.Categorias)
+        {
+            <tr>
+                <td>@c.Id</td>
+                <td>@c.Nome</td>
+                <td>@c.Descricao</td>
+            </tr>
+        }
+    </tbody>
+</table>

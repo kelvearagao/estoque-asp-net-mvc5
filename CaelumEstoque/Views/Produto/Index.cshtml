@@ -1,41 +1,25 @@
-﻿
-@{
-    Layout = null;
-}
+﻿@model IList<CaelumEstoque.Models.Produto>
 
-@model IList<CaelumEstoque.Models.Produto>
 
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-</head>
-<body>
-    <div>
-        <table>
-            <thead>
-                <tr>
-                    <th>Id</th>
-                    <th>Nome</th>
-                    <th>Quantidade</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach(var produto in Model)
-                {
-                    <tr>
-                        <td>@produto.Id</td>
-                        <td>
-                            @* @Html.ActionLink(produto.Nome, "Visualiza", new { id = produto.Id }) *@
-                            @Html.RouteLink(produto.Nome, "VisualizaProduto", new { id = produto.Id })
-                        </td>
-                        <td>@produto.Quantidade</td>
-                    </tr>
-                }
-            </tbody>
-        </table>
-    </div>
-</body>
-</html>
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nome</th>
+            <th>Quantidade</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var produto in Model)
+        {
+            <tr>
+                <td>@produto.Id</td>
+                <td>
+                    @* @Html.ActionLink(produto.Nome, "Visualiza", new { id = produto.Id }) *@
+                    @Html.RouteLink(produto.Nome, "VisualizaProduto", new { id = produto.Id })
+                </td>
+                <td>@produto.Quantidade</td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,26 +1,11 @@
 ﻿
-@{
-    Layout = null;
-}
+<form action="/Categoria/Adiciona" method="post">
+    <label for="nome">Nome:</label>
+    <input id="nome" name="categoria.Nome" />
 
-<!DOCTYPE html>
+    <label for="descricao">Descrição:</label>
+    <input id="descricao" name="categoria.Descricao" />
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Form</title>
-</head>
-<body>
-    <div>
-        <form action="/Categoria/Adiciona" method="post">
-            <label for="nome">Nome:</label>
-            <input id="nome" name="categoria.Nome" />
+    <input type="submit" />
+</form>
 
-            <label for="descricao">Descrição:</label>
-            <input id="descricao" name="categoria.Descricao" />
-
-            <input type="submit" />
-        </form>
-    </div>
-</body>
-</html>
