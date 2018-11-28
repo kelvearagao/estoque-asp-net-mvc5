@@ -16,6 +16,7 @@ namespace CaelumEstoque.Controllers
             return View();
         }
 
+        [ValidateAntiForgeryToken]
         public ActionResult Autentica(String login, String senha)
         {
             UsuariosDAO dao = new UsuariosDAO();

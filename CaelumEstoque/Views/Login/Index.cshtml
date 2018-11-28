@@ -1,10 +1,11 @@
 ﻿
 <form action="/Login/Autentica" method="post">
+    @Html.AntiForgeryToken()
     <label for="login">Login:</label>
     <input name="login" id="login" class="form-control" />
 
     <label for="senha">Senha:</label>
-    <input name="senha" id="senha" class="form-control" type="password"/>
+    <input name="senha" id="senha" class="form-control" type="password" />
 
     <input type="submit" value="Logar" />
 </form>

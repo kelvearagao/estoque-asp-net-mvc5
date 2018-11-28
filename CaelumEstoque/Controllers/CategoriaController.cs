@@ -27,6 +27,7 @@ namespace CaelumEstoque.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Adiciona(CategoriaDoProduto categoria)
         {
             CategoriasDAO dao = new CategoriasDAO();
